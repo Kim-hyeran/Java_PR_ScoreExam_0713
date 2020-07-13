@@ -19,6 +19,7 @@ public class ScoreServiceV1 implements ScoreService {
 	Scanner scan;
 	FileReader fileReader;
 	BufferedReader buffer;
+	PrintStream outPut;
 	
 	String scoreFile="";
 	
@@ -179,8 +180,6 @@ public class ScoreServiceV1 implements ScoreService {
 	@Override
 	public void scoreSave() {
 		String scoreFile="src/com/biz/score/data/score.txt";
-		
-		PrintStream outPut=null;
 		
 		try {
 			outPut=new PrintStream(scoreFile);
